@@ -1,0 +1,23 @@
+<body>
+  <%-include('partials/header'); -%>
+  <nav>
+    <h1><a href="/">Smoothies</a></h1>
+  </nav>
+  <header>
+    <div class="smoothie">
+      <img src="/smoothie.png" alt="" />
+    </div>
+    <div class="headings">
+      <h2>Smoothie Recipes</h2>
+      <ul>
+        <% data.forEach((item) => { %>
+        <li><%= item.name %> ---- <%=item.price%></li>
+        <%})%>
+      </ul>
+      <h3>By elvis For Ninjas</h3>
+      <a href="/about" class="btn">View Recipes</a>
+    </div>
+  </header>
+
+  <%- include('partials/footer'); -%>
+</body>
